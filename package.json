@@ -1,0 +1,20 @@
+{
+  "name": "project-portfolio-final",
+  "version": "1.0.0",
+  "source": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --open",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "Ralph Dagaas",
+  "license": "ISC",
+  "description": "Project Portfolio",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
