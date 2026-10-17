@@ -8,6 +8,12 @@
 // Note: This file currently uses CSS custom properties (var(--...)) directly.
 @use 'variables' as v;
 
+@use 'card';
+
+@use 'carousel';
+
+@use 'variables';
+
 /* Theme Switch Button Styling / Positioning */
 .theme-switch {
     margin-right: 1rem;

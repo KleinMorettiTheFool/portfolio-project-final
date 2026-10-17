@@ -10,7 +10,7 @@
   --text-muted: #{v.$light-text-muted};
   --primary: #{v.$light-primary};
   --border: #{v.$light-border};
-  --button: #{v.$light-button};
+  --navbar: #{v.$light-navbar};
 }
 
 /* Dark theme */
@@ -23,7 +23,7 @@ body:has(#theme-toggle:checked) {
   --text-muted: #{v.$dark-text-muted};
   --primary: #{v.$dark-primary};
   --border: #{v.$dark-border};
-  --button: #{v.$dark-button};
+  --navbar: #{v.$dark-navbar};
 }
 
 /* Apply the theme */

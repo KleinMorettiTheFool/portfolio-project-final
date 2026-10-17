@@ -45,8 +45,35 @@
                 <span class="theme-slider"></span>
             </label>
         </div>
-
     </header>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Profile</a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
     <!-- Main -->
     <main class="container">
@@ -64,7 +91,41 @@
                         <h3>Nucampsite</h3>
                     </div>
                     <div class="card-body">
-                        
+                        <div class="card-image">
+                            <a href="https://nucampsite-b9174.web.app/" target="_blank">
+                                <div id="nucampsiteCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/nucampsite-slide1.png" class="d-block w-100" alt="Nucampsite homepage">
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="images/nucampsite-slide2.png" class="d-block w-100" alt="Nucampsite second screenshot">
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="images/nucampsite-slide3.png" class="d-block w-100" alt="Nucampsite third screenshot">
+                                        </div>
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#nucampsiteCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+
+                                    <button class="carousel-control-next" type="button" data-bs-target="#nucampsiteCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+
+                                </div>
+                            </a>
+                        </div>
+                        <p class="card-text">
+                            This site was straigforward to build, the different excercises showed us how components such as Navbar, Card, Carousel, Col class, Modal functioned.
+                            It helped me understanding positioning of items better.
+                        </p>
                     </div>
                 </div>
                 Testing
@@ -72,15 +133,49 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Coffeeshop website</h2>
+                        <h3>Coffeeshop website</h3>
                     </div>
                     <div class="card-body">
+                        <div class="card-image">
+                            <a href="https://lecoqmatinalfrenchcoffeeshop.web.app/" target="_blank">
+                                <div id="coffeeshopCarousel" class="carousel slide" data-bs-ride="carousel">
 
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/coffeeshop-slide1.png" class="d-block w-100" alt="Coffee shop homepage">
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="images/coffeeshop-slide2.png" class="d-block w-100" alt="Coffee shop second screenshot">
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <img src="images/coffeeshop-slide3.png" class="d-block w-100" alt="Coffee shop third screenshot">
+                                        </div>
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#coffeeshopCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+
+                                    <button class="carousel-control-next" type="button" data-bs-target="#coffeeshopCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+
+                                </div>
+                            </a>
+                        </div>
+                        <p class="card-text">
+                            For this website, we had more freedom of positioning and choice of colors. The theme I had decided was a French coffeeshop, so I choosed two tones of brown to reflect the color of coffee combined with the French flag color: blue, white and red color.
+                        </p>
                     </div>
                 </div>
                 Testing
             </div>
         </div>
+
     </main>
 
     <!-- Footer -->

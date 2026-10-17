@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 1;
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: v.$dark-primary;
+    border-radius: 50%;
+    background-size: 60% 60%;
+}
