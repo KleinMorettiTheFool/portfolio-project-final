@@ -2,33 +2,94 @@
 <html lang="en">
     
 <head>
+    <!-- Meta (character encoding & responsive layout) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Isometra&family=Rye&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <title>Test Project</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.scss">
+    <link rel="stylesheet" href="css/header.scss">
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="css/footer.scss">
+
+    <!-- Title -->
+    <title>Profile Page</title>
 </head>
     
 <body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Profile: Ralph Dagaas</h1>
+        </div>
+
+        <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+
+            <label for="theme-toggle" class="theme-label">
+                <span class="theme-icon theme-icon-sun">☀</span>
+                <span class="theme-icon theme-icon-moon">☾</span>
+
+                <span class="theme-text theme-text-light">Light mode: ON</span>
+                <span class="theme-text theme-text-dark">Dark mode: ON</span>
+
+                <span class="theme-slider"></span>
+            </label>
+        </div>
+
+    </header>
+
+    <!-- Main -->
     <main class="container">
-        <h1>Test Project</h1>
-        <p>This is a simple test project to demonstrate how easy it is to set up a new project. 
-        In this exercise, we completed the following tasks:</p>
-        <ol>
-            <li>Set up the project folder and installed the initial packages</li>
-            <li>Initialized Git</li>
-            <li>Initialized Firebase</li>
-            <li>Added some HTML code</li>
-            <li>Linked the Bootstrap files</li>
-            <li>Served and tested the project locally</li>
-            <li>Packaged the project for deployment</li>
-            <li>Deployed to Firebase</li>
-        </ol>
-        <p>Later, I might decide to come back here and play around with this file some more, to test out some things. 
-        It's sort of like a code sandbox that I can use to practice Bootstrap components, styles, and more. 
-        If I want to change anything in this project, I just need to re-build and re-deploy my changes. It's that easy!</p>
+        <h1>Welcome here! Bienvenue !</h1>
+        <p>Here is my profile page showcasing my skills in Web Development Fundamentals course offered by <a href="">Nucamp.co</a>.
+            I also aim to go for the Full Stack Developper course to gain a better skillset for my career.
+            Below are two projects I made during this current course.
+            By the way, I implemented a toggle button that enables switching between a light mode theme and a dark mode theme, using only HTML, CSS, Bootstrap and SCSS.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Nucampsite</h3>
+                    </div>
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+                Testing
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Coffeeshop website</h2>
+                    </div>
+                    <div class="card-body">
+
+                    </div>
+                </div>
+                Testing
+            </div>
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Testing Stuff</h2>
+    </footer>
      
+    <!-- Bootstrap JavaScript -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
 </body>
 </html>

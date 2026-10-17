@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+header {
+  background-color: var(--surface);
+  color: var(--text);
+  padding-bottom: 1.5rem;
+}
+
+header h1 {
+  font-family: v.$font-heading;
+  padding-top: 1.5rem;
+}

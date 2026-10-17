@@ -1,0 +1,45 @@
+@use 'variables' as v;
+
+/* Light theme (default) */
+:root {
+  color-scheme: light;
+
+  --background: #{v.$light-background};
+  --surface: #{v.$light-surface};
+  --text: #{v.$light-text};
+  --text-muted: #{v.$light-text-muted};
+  --primary: #{v.$light-primary};
+  --border: #{v.$light-border};
+  --button: #{v.$light-button};
+}
+
+/* Dark theme */
+body:has(#theme-toggle:checked) {
+  color-scheme: dark;
+
+  --background: #{v.$dark-background};
+  --surface: #{v.$dark-surface};
+  --text: #{v.$dark-text};
+  --text-muted: #{v.$dark-text-muted};
+  --primary: #{v.$dark-primary};
+  --border: #{v.$dark-border};
+  --button: #{v.$dark-button};
+}
+
+/* Apply the theme */
+body {
+  font-family: v.$font-body;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.card {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--surface);
+}

@@ -1,0 +1,192 @@
+/* 1. Import Bootstrap */
+@use "bootstrap/scss/bootstrap";
+/* 2. Import Themes (Light & Dark) */
+@use './themes';
+
+// Import the variables module and give it the alias "vars".
+// This allows you to access variables defined in the variables file using vars.$variableName.
+// Note: This file currently uses CSS custom properties (var(--...)) directly.
+@use 'variables' as v;
+
+/* Theme Switch Button Styling / Positioning */
+.theme-switch {
+    margin-right: 1rem;
+
+    // Uses Flexbox to arrange the switch's contents. Without it, the button won't be positioned correctly to the right of the page as intented.
+    display: flex;
+
+    // Aligns the contents to the right side of the flex container.
+    justify-content: end;
+
+    // Targets the input checkbox nested inside .theme-switch.
+    input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        //opacity: 0 makes the checkbox transparent, but is not needed here if using width and height at one pixel because we don't see the checkox (it's too small).
+        opacity: 0;
+    }
+
+    // Styles the label associated with the theme toggle checkbox. The label kinda takes the function of a button here and replace the checkbox. It is visually better than the checkbox.
+    .theme-label {
+        // Makes the label an inline-level Flexbox container. It helps to have a better positioning of the toggle inside the button.
+        display: inline-flex;
+
+        // Vertically centers the label's contents.
+        align-items: center;
+
+        // Adds 0.5rem of space between the label's child elements.
+        gap: 0.5rem;
+
+        // Adds 0.5rem of vertical and 1rem of horizontal inner spacing.
+        padding: 1rem 2rem;
+
+        // Adds a 3px solid border using the --border CSS variable.
+        border: 3px solid var(--border);
+
+        // Rounds the corners into a pill-shaped border.
+        border-radius: 50px;
+
+        // Uses the --surface CSS variable for the label's background.
+        background-color: var(--surface);
+
+        // Uses the --text CSS variable for the label's text color.
+        color: var(--text);
+
+        // Changes the cursor to a pointer to indicate that the label is clickable.
+        cursor: pointer;
+
+        // Smoothly animates changes to the background and text colors.
+        // The duration is 0.2 seconds, with an ease timing function.
+        transition: background-color 0.2s ease,
+                    color 0.2s ease;
+    }
+
+    // Styles the sun and moon icons inside the label.
+    .theme-icon {
+        // Sets the icon font size to 1.5rem.
+        font-size: 1.5rem;
+    }
+
+    // Styles the sliding track of the toggle switch.
+    .theme-slider {
+        // Establishes a positioning context for the ::before pseudo-element.
+        position: relative;
+
+        // Sets the slider track width to 2.5rem.
+        width: 2.5rem;
+
+        // Sets the slider track height to 1.5rem.
+        height: 1.5rem;
+
+        // Rounds the track's corners into a pill shape.
+        border-radius: 50px;
+
+        // Gives the track a gray-blue background by default.
+        background-color: var(--primary);
+
+        // Smoothly animates changes to the track's background color.
+        transition: background-color 0.2s ease;
+
+        // Creates the circular thumb that moves along the slider track.
+        &::before {
+            // Generates the pseudo-element's content.
+            // An empty string is used because the thumb is purely decorative.
+            content: "";
+
+            // Positions the thumb relative to the slider track.
+            position: absolute;
+
+            // Places the thumb 3px from the top of the track.
+            top: 3px;
+
+            // Places the thumb 3px from the left edge of the track.
+            left: 3px;
+
+            // Sets the thumb width to the track height minus 6px.
+            // This leaves a 3px gap on both the top and bottom.
+            width: calc(1.5rem - 6px);
+
+            // Sets the thumb height using the same calculation as its width.
+            height: calc(1.5rem - 6px);
+
+            // Makes the thumb circular.
+            border-radius: 50%;
+
+            // Gives the thumb a white background.
+            background-color: var(--background);
+
+            // Smoothly animates the thumb's movement. Adding this will give a sliding effect (instead of it teleporting).
+            transition: transform 0.2s ease;
+        }
+    }
+
+    // Targets the slider when the checkbox is checked.
+    // The + selector means .theme-label must immediately follow the input,
+    // and .theme-slider must be nested inside that label.
+    input:checked + .theme-label .theme-slider {
+
+        // Styles the thumb's pseudo-element when the checkbox is checked.
+        &::before {
+            // Moves the thumb 1.15rem to the right.
+            // The transform transition above makes this movement smooth.
+            transform: translateX(1.15rem);
+        }
+    }
+
+    // Styles the label when the hidden checkbox receives keyboard focus.
+    input:focus-visible + .theme-label {
+        // Draws a 2px solid outline using the primary theme color. This one is really for accessibility, you can see when using the keyboard to navigate instead of mouth.
+        outline: 2px solid var(--primary);
+
+        // Adds 3px of space between the label and its outline.
+        // This improves the visibility of keyboard focus.
+        outline-offset: 3px;
+    }
+
+}
+
+/* Hide the text for the inactive state */
+
+// Hides the text that says "Light mode" by default.
+// It becomes visible when the checkbox is checked.
+.theme-text-dark {
+    display: none;
+}
+
+/* When dark mode is enabled */
+
+// Targets the label immediately following the checked theme toggle.
+// The nested rules are compiled into separate CSS selectors.
+#theme-toggle:checked + .theme-label {
+    // Hides the text that says "Dark mode" when the checkbox is checked.
+    .theme-text-light {
+        display: none;
+    }
+
+    // Shows the text that says "Light mode" when the checkbox is checked.
+    .theme-text-dark {
+        display: inline;
+    }
+}
+
+// Hides the moon icon in the unchecked state.
+.theme-icon-moon {
+    display: none;
+}
+
+/* Switch icons when checkbox is checked */
+
+// Selects the sun icon when it is a following sibling of the checked checkbox,
+// with the icon nested inside a .theme-label element.
+// The ~ selector allows any number of intervening sibling elements.
+#theme-toggle:checked ~ .theme-label .theme-icon-sun {
+    // Hides the sun icon when the checkbox is checked.
+    display: none;
+}
+
+// Selects the moon icon under the same checked-checkbox condition.
+#theme-toggle:checked ~ .theme-label .theme-icon-moon {
+    // Displays the moon icon when the checkbox is checked.
+    display: inline;
+}

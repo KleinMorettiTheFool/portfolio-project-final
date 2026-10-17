@@ -1,0 +1,18 @@
+@use 'variables' as v;
+
+/* Main content layout and appearance */
+main {
+  color: var(--text);
+}
+
+/* Main content headings */
+main h1,
+main h2,
+main h3 {
+  color: var(--text);
+}
+
+/* Secondary text, when this class is used */
+.text-muted {
+  color: var(--text-muted);
+}

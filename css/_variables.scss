@@ -1,0 +1,28 @@
+/* Define global colors, global font family*/
+
+// Default font for body text.
+$font-body: 'Lato', sans-serif;
+
+// Font for decorative headings.
+$font-heading: 'Rye', serif;
+
+// Optional font for a special title or decorative element.
+$font-display: 'Isometra', serif;
+
+/* Light mode */
+$light-background: #F4F6F8;
+$light-surface: #E5EDF7;
+$light-text: #252F3D;
+$light-text-muted: #596779;
+$light-primary: #536B85;
+$light-border: #B0BECF;
+$light-button: #A8C9F0;
+
+/* Dark mode */
+$dark-background: #1D2735;
+$dark-surface: #2C4059;
+$dark-text: #F0F3F7;
+$dark-text-muted: #B1BECD;
+$dark-primary: #91A4B8;
+$dark-border: #586B83;
+$dark-button: #285A91;

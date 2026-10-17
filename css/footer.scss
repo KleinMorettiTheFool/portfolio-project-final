@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+footer {
+  background-color: var(--background);
+  color: var(--text-muted);
+  padding-top: 1.5rem;
+}

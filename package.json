@@ -12,6 +12,8 @@
   "license": "ISC",
   "description": "Project Portfolio",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4",
+    "@swc/core": "^1.15.47",
     "parcel": "^2.16.4"
   },
   "dependencies": {
