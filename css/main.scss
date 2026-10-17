@@ -16,3 +16,9 @@ main h3 {
 .text-muted {
   color: var(--text-muted);
 }
+
+h2 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}

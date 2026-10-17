@@ -2,7 +2,7 @@
 
 .navbar {
     background-color: var(--navbar);
-    color: var(--text);
+    color: red;
 }
 
 .navbar .navbar-brand,
@@ -13,4 +13,22 @@
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
     color: var(--primary);
+}
+
+/* Theme-aware navbar toggle button */
+.navbar .navbar-toggler {
+    background-color: var(--surface);
+    border-color: var(--border);
+    color: var(--text);
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* Hover and keyboard-focus states */
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus-visible {
+    background-color: var(--primary);
+    border-color: var(--primary);
 }

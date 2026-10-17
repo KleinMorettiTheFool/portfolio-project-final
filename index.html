@@ -29,22 +29,11 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>Profile: Ralph Dagaas</h1>
+            <h1>Profile</h1>
+            <img class="header-image" src="images/LogoRalphD.gif" alt="Logo with the name Ralph">
         </div>
 
-        <div class="theme-switch">
-            <input type="checkbox" id="theme-toggle">
 
-            <label for="theme-toggle" class="theme-label">
-                <span class="theme-icon theme-icon-sun">☀</span>
-                <span class="theme-icon theme-icon-moon">☾</span>
-
-                <span class="theme-text theme-text-light">Light mode: ON</span>
-                <span class="theme-text theme-text-dark">Dark mode: ON</span>
-
-                <span class="theme-slider"></span>
-            </label>
-        </div>
     </header>
 
     <!-- Navbar -->
@@ -73,6 +62,20 @@
             </ul>
         </div>
     </div>
+
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+
+        <label for="theme-toggle" class="theme-label">
+            <span class="theme-icon theme-icon-sun">☀</span>
+            <span class="theme-icon theme-icon-moon">☾</span>
+
+            <span class="theme-text theme-text-light">Light mode: ON</span>
+            <span class="theme-text theme-text-dark">Dark mode: ON</span>
+
+            <span class="theme-slider"></span>
+        </label>
+    </div>
 </nav>
 
     <!-- Main -->
@@ -84,6 +87,13 @@
             By the way, I implemented a toggle button that enables switching between a light mode theme and a dark mode theme, using only HTML, CSS, Bootstrap and SCSS.
         </p>
 
+        <!-- Special Theme! -->
+         <div class="theme-special">
+            <input type="checkbox" id="theme-toggle-special">
+            <label for="theme-toggle-special" class="theme-label-special">A mini surprise, click here!</label>
+        </div>
+
+        <h2>Projects</h2>
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
@@ -179,8 +189,16 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <h2>Testing Stuff</h2>
+    <footer class="mt-3">
+        <div class="container">
+                <div class="footer-contact">
+                    <h3>Contact (Business E-mail)</h3>
+                    <a class="btn btn-link" href="mailto:knighty.lupa@gmail.com">
+                        <i class="bi bi-envelope-fill"></i> knighty.lupa@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
      
     <!-- Bootstrap JavaScript -->

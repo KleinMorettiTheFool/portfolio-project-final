@@ -1,7 +1,52 @@
 @use 'variables' as v;
 
 footer {
-  background-color: var(--background);
-  color: var(--text-muted);
   padding-top: 1.5rem;
+
+   /* Create a gradient using the active theme's colors. */
+ background: linear-gradient(
+        120deg,
+        var(--footer-gradient-start),
+        var(--footer-gradient-middle),
+        var(--footer-gradient-end),
+        var(--footer-gradient-start)
+    );
+
+    background-size: 300% 300%;
+    animation: footer-gradient 12s ease infinite;
+
+    color: var(--footer-text);
 }
+
+@keyframes footer-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    footer {
+        animation: none;
+        background-size: 100% 100%;
+    }
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-link {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+

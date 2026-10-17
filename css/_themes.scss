@@ -43,3 +43,33 @@ body {
   background-color: var(--primary);
   color: var(--surface);
 }
+
+/* Dynamic gradient for the Footer */
+
+/* Light theme (default) */
+:root {
+    --footer-gradient-start: #{v.$light-footer-gradient-start};
+    --footer-gradient-middle: #{v.$light-footer-gradient-middle};
+    --footer-gradient-end: #{v.$light-footer-gradient-end};
+    --footer-text: #{v.$light-footer-text};
+}
+
+/* Dark theme */
+body:has(#theme-toggle:checked) {
+    // Keep your existing dark theme custom properties here.
+    --footer-gradient-start: #{v.$dark-footer-gradient-start};
+    --footer-gradient-middle: #{v.$dark-footer-gradient-middle};
+    --footer-gradient-end: #{v.$dark-footer-gradient-end};
+    --footer-text: #{v.$dark-footer-text};
+}
+
+// Third Theme! (Yes I wanted to try one lol.)
+
+body:has(#theme-toggle-special:checked) {
+    --background: #241533;
+    --surface: #35204F;
+    --text: #F8F0FF;
+    --text-muted: #D0B8E5;
+    --primary: #D69BFF;
+    --border: #79569A;
+}

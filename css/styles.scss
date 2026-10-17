@@ -12,7 +12,7 @@
 
 @use 'carousel';
 
-@use 'variables';
+@use 'navbar';
 
 /* Theme Switch Button Styling / Positioning */
 .theme-switch {
@@ -195,4 +195,31 @@
 #theme-toggle:checked ~ .theme-label .theme-icon-moon {
     // Displays the moon icon when the checkbox is checked.
     display: inline;
+}
+
+// Third Theme
+
+.theme-special {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+    }
+}
+.theme-label-special {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        border: 3px solid var(--border);
+        border-radius: 50px;
+        background-color: var(--surface);
+        color: var(--text);
+        cursor: pointer;
+        transition: background-color 0.2s ease,
+                    color 0.2s ease;
 }
