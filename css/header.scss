@@ -14,4 +14,6 @@ header h1 {
 .header-image {
   width: 320px;
   height: auto;
+  border: var(--border) 5px solid;
+  border-radius: 25px;
 }

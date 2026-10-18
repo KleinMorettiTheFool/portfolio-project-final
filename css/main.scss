@@ -17,8 +17,31 @@ main h3 {
   color: var(--text-muted);
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: v.$font-display;
+}
+
 h2 {
     display: flex;
     justify-content: center;
     padding: 2rem;
+    font-family: v.$font-heading;
+}
+
+#moreInfo li {
+  font-family: v.$font-special;
+  font-weight: 1000;
+  font-size: xx-large;
+}
+
+ul li::marker {
+  color: --primary;
+  font-size: 1.2em;
+}
+
+.theme-special {
+  padding: 6rem;
 }

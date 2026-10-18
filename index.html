@@ -9,7 +9,7 @@
         <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Isometra&family=Rye&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Isometra&family=Pinyon+Script&family=Rye&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
@@ -37,9 +37,9 @@
     </header>
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#">My Profile</a>
+        <a class="navbar-brand" href="#">Profile</a>
 
         <button class="navbar-toggler"
                 type="button"
@@ -54,10 +54,13 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#aboutMe">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="navbar-nav">
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -81,117 +84,183 @@
     <!-- Main -->
     <main class="container">
         <h1>Welcome here! Bienvenue !</h1>
-        <p>Here is my profile page showcasing my skills in Web Development Fundamentals course offered by <a href="">Nucamp.co</a>.
+        <p>Here is my profile page showcasing my skills in Web Development Fundamentals course offered by <a href="https://www.nucamp.co/" target="_blank">Nucamp.co</a>.
             I also aim to go for the Full Stack Developper course to gain a better skillset for my career.
             Below are two projects I made during this current course.
             By the way, I implemented a toggle button that enables switching between a light mode theme and a dark mode theme, using only HTML, CSS, Bootstrap and SCSS.
         </p>
 
-        <!-- Special Theme! -->
-         <div class="theme-special">
+        <!-- About Me -->
+        <section class="container">
+            <h2 id="aboutMe">About Me</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul id="moreInfo">
+                        <li class="p-3">I was born near Aix-en-Provence, France.</li>
+                        <li class="p-3">I live currently in Paris.</li>
+                        <li class="p-3">This is my final project in Web Development Fundamentals course.</li>
+                        <li class="p-3">Next, I will soon start a Full Stack Developper course to further develop my newly aquired skils.</li>
+                        <li class="p-3">I am interested in watching anime, series, movies, reading novel/manga/psychology/philosophy, gaming, learning languages and also learning about new stuff in general (language, high tech, health, nutrition, sometimes geo politics).</li>
+                        <li class="p-3">One goal to do in my lifetime would be to write a manga and turn it into an anime.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="container">
+            <h2 id="projects">Projects</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Nucampsite</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-image">
+                                <a href="https://nucampsite-b9174.web.app/" target="_blank">
+                                    <div id="nucampsiteCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/nucampsite-slide1.png" class="d-block w-100" alt="Nucampsite homepage">
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img src="images/nucampsite-slide2.png" class="d-block w-100" alt="Nucampsite second screenshot">
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img src="images/nucampsite-slide3.png" class="d-block w-100" alt="Nucampsite third screenshot">
+                                            </div>
+                                        </div>
+
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#nucampsiteCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+
+                                        <button class="carousel-control-next" type="button" data-bs-target="#nucampsiteCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <p class="card-text mt-3 mb-4">
+                                This site was straigforward to build, the different excercises showed us how components such as Navbar, Card, Carousel, Col class, Modal functioned.
+                                It helped me understanding positioning of items better.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Coffeeshop website</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-image">
+                                <a href="https://lecoqmatinalfrenchcoffeeshop.web.app/" target="_blank">
+                                    <div id="coffeeshopCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/coffeeshop-slide1.png" class="d-block w-100" alt="Coffee shop homepage">
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img src="images/coffeeshop-slide2.png" class="d-block w-100" alt="Coffee shop second screenshot">
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img src="images/coffeeshop-slide3.png" class="d-block w-100" alt="Coffee shop third screenshot">
+                                            </div>
+                                        </div>
+
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#coffeeshopCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+
+                                        <button class="carousel-control-next" type="button" data-bs-target="#coffeeshopCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <p class="card-text mt-3">
+                                For this website, we had more freedom of positioning and choice of colors. The theme I had decided was a French coffeeshop, so I choosed two tones of brown to reflect the color of coffee combined with the French flag color: blue, white and red color.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Special Theme + Music -->
+    <div class="container mt-3">
+        <div class="theme-special mt-3">
+
             <input type="checkbox" id="theme-toggle-special">
-            <label for="theme-toggle-special" class="theme-label-special">A mini surprise, click here!</label>
+
+            <label
+                for="theme-toggle-special"
+                class="theme-label-special btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#musicModal"
+            >
+                Purple Theme ♫
+            </label>
+
         </div>
+    </div>
 
-        <h2>Projects</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Nucampsite</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-image">
-                            <a href="https://nucampsite-b9174.web.app/" target="_blank">
-                                <div id="nucampsiteCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Music modal -->
+    <div class="modal fade" id="musicModal" tabindex="-1"
+        aria-labelledby="musicModalLabel" aria-hidden="true">
 
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="images/nucampsite-slide1.png" class="d-block w-100" alt="Nucampsite homepage">
-                                        </div>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
-                                        <div class="carousel-item">
-                                            <img src="images/nucampsite-slide2.png" class="d-block w-100" alt="Nucampsite second screenshot">
-                                        </div>
+                <div class="modal-header">
 
-                                        <div class="carousel-item">
-                                            <img src="images/nucampsite-slide3.png" class="d-block w-100" alt="Nucampsite third screenshot">
-                                        </div>
-                                    </div>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+                </div>
 
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#nucampsiteCarousel" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-
-                                    <button class="carousel-control-next" type="button" data-bs-target="#nucampsiteCarousel" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-
-                                </div>
-                            </a>
-                        </div>
-                        <p class="card-text">
-                            This site was straigforward to build, the different excercises showed us how components such as Navbar, Card, Carousel, Col class, Modal functioned.
-                            It helped me understanding positioning of items better.
-                        </p>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.youtube.com/embed/TxxJ9SUOVgw?autoplay=1"
+                            title="YouTube Music"
+                            allow="encrypted-media"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
-                Testing
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Coffeeshop website</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-image">
-                            <a href="https://lecoqmatinalfrenchcoffeeshop.web.app/" target="_blank">
-                                <div id="coffeeshopCarousel" class="carousel slide" data-bs-ride="carousel">
 
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="images/coffeeshop-slide1.png" class="d-block w-100" alt="Coffee shop homepage">
-                                        </div>
-
-                                        <div class="carousel-item">
-                                            <img src="images/coffeeshop-slide2.png" class="d-block w-100" alt="Coffee shop second screenshot">
-                                        </div>
-
-                                        <div class="carousel-item">
-                                            <img src="images/coffeeshop-slide3.png" class="d-block w-100" alt="Coffee shop third screenshot">
-                                        </div>
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#coffeeshopCarousel" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-
-                                    <button class="carousel-control-next" type="button" data-bs-target="#coffeeshopCarousel" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-
-                                </div>
-                            </a>
-                        </div>
-                        <p class="card-text">
-                            For this website, we had more freedom of positioning and choice of colors. The theme I had decided was a French coffeeshop, so I choosed two tones of brown to reflect the color of coffee combined with the French flag color: blue, white and red color.
-                        </p>
-                    </div>
-                </div>
-                Testing
             </div>
         </div>
+    </div>
+
 
     </main>
 
     <!-- Footer -->
     <footer class="mt-3">
         <div class="container">
-                <div class="footer-contact">
+                <div class="footer-contact" id="contact">
                     <h3>Contact (Business E-mail)</h3>
                     <a class="btn btn-link" href="mailto:knighty.lupa@gmail.com">
                         <i class="bi bi-envelope-fill"></i> knighty.lupa@gmail.com
